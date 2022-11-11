@@ -43,9 +43,9 @@ func main() {
 		}
 	}
 
-	occurrenceMap := make(map[string]string)
+	occurrenceMap := make(map[string]int)
 	for i := 0; i < len(covidOccur); i++ {
-		occurrenceMap[covidOccur[i]] = lastTime[i]
+		occurrenceMap[lastTime[i]] += 1
 	}
 
 	fmt.Println(occurrenceMap)
