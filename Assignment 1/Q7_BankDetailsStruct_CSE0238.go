@@ -1,6 +1,8 @@
 /*
 7. Read account no., name, balance amount and amount to be deposited to create and print account
 details of 2 persons using struct "bank account".
+8. Create account details of 2 persons using struct "bank account". Read account no., name, balance amount
+and amount to be deposited and print the updated balance  using  go functions.
 */
 
 package main
@@ -32,9 +34,25 @@ func inputBankAccount() BankAccount {
 }
 
 func main() {
-	acc1 := inputBankAccount()
-	acc2 := inputBankAccount()
+	accs := [2]BankAccount{inputBankAccount(), inputBankAccount()}
 
-	fmt.Println(acc1)
-	fmt.Println(acc2)
+	fmt.Println("\nAccounts Created:")
+	fmt.Println(accs[0], accs[1])
+
+	accno := 0
+	deposit := 0.0
+
+	fmt.Println("\nEnter details of account to deposit:")
+	fmt.Println("Enter account no: ")
+	fmt.Scan(&accno)
+	fmt.Println("Enter deposit amount: ")
+	fmt.Scan(&deposit)
+
+	for _, acc := range accs {
+		if acc.accountNo == accno {
+			fmt.Println("Account found:", acc)
+			acc.balance += deposit
+			fmt.Println("New balance: ", acc.balance)
+		}
+	}
 }
