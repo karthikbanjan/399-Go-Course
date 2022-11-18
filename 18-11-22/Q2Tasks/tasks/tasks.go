@@ -22,10 +22,10 @@ func SumOfSquares(numbers ...int) int {
 }
 
 func SortAscending(numbers ...int) []int {
-	for i, vi := range numbers {
-		for j, vj := range numbers {
-			if vi < vj {
-				numbers[i], numbers[j] = vj, vi
+	for i := range numbers {
+		for j := i; j < len(numbers); j++ {
+			if numbers[i] > numbers[j] {
+				numbers[i], numbers[j] = numbers[j], numbers[i]
 			}
 		}
 	}
@@ -34,10 +34,10 @@ func SortAscending(numbers ...int) []int {
 }
 
 func SortDescending(numbers ...int) []int {
-	for i, vi := range numbers {
-		for j, vj := range numbers {
-			if vi > vj {
-				numbers[i], numbers[j] = vj, vi
+	for i := range numbers {
+		for j := i; j < len(numbers); j++ {
+			if numbers[i] < numbers[j] {
+				numbers[i], numbers[j] = numbers[j], numbers[i]
 			}
 		}
 	}
