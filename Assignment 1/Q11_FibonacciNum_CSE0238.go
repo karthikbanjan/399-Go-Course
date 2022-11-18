@@ -23,8 +23,12 @@ func main() {
 	var n int
 
 	for {
-		fmt.Println("\nEnter position of fibonacci number(Starts from 0):")
+		fmt.Println("\nEnter position of fibonacci number(Starts from 0)(Neg Number to Exit):")
 		fmt.Scan(&n)
+
+		if n < 0 {
+			break
+		}
 
 		fmt.Println("Fibonacci number at position", n, "is", fib(n))
 	}
