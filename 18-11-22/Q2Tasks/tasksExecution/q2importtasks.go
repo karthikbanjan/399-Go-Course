@@ -48,6 +48,7 @@ func main() {
 			fmt.Println("Sorted in descending order:", tasks.SortDescending(numbers...))
 
 		case 5:
+			fmt.Println("Exiting...")
 			return
 
 		default:
