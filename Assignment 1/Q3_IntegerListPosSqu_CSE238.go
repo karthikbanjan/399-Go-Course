@@ -1,3 +1,11 @@
+/*
+3. Read a list of integers from the user, name it as input, until the user enters 0. Then Create 2 new
+lists namely
+1). Square, where each element is a square of the corresponding element in the input list
+2). Positive, with only positive numbers from the input list.
+
+*/
+
 package main
 
 import "fmt"

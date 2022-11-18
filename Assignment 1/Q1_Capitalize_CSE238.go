@@ -1,3 +1,8 @@
+/*
+1.  Ask the user to input a sentence which contains at-least 4 words.
+Capitalize first letter of  each word and display complete sentence.
+*/
+
 package main
 
 import (
