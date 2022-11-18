@@ -41,6 +41,7 @@ func main() {
 
 		case 5:
 			fmt.Println("Thank you for using the calculator")
+			return
 
 		default:
 			fmt.Println("Invalid choice...Restarting!")
