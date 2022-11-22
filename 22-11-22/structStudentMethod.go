@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type student struct {
 	name  string
 	age   int
@@ -15,9 +17,9 @@ func (s student) averageMarks() int {
 }
 
 func (s student) studentDetails() {
-	println("Name:", s.name)
-	println("Age:", s.age)
-	println("Average Marks:", s.averageMarks())
+	fmt.Println("Name:", s.name)
+	fmt.Println("Age:", s.age)
+	fmt.Println("Average Marks:", s.averageMarks())
 }
 
 func main() {
